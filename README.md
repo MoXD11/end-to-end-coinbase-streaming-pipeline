@@ -7,13 +7,13 @@ The pipeline ingests Coinbase's public event stream, transports it through **Apa
 ## Architecture
 
 ```
-Wikipedia recentchange API
+coinbase recentchange API
         │
         ▼
   Flume Agent #1  (exec coinbase.py → memory channel → Kafka sink)
         │
         ▼
-     Kafka topic: wikidata
+     Kafka topic: topic
         │
         ├──────────────────────────────┐
         ▼                              ▼
